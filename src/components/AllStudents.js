@@ -4,11 +4,10 @@ import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
 import { studentContext } from "../App";
 
-function AllStudents(props) {
+function AllStudents() {
   const context = useContext(studentContext);
   console.log("context data", context);
-  // console.log(props.data);
-
+  
   // let [stu, setStu] = useState(props.data.students);
 
   let navigate = useNavigate();
@@ -17,10 +16,6 @@ function AllStudents(props) {
     newArr.splice(i, 1);
     context.setStudents(newArr);
 
-    // let arr = props.data.students;
-    // arr.splice(i, 1);
-    // console.log(arr);
-    // props.data.setStudents(arr); //this is an issue component is not renderring  thats why we neeed to update state
   };
   return (
     <>

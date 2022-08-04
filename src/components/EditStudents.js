@@ -26,7 +26,7 @@ function EditStudents(props) {
       status,
     };
     context.students.splice(params.id, 1, data);  // we can also use deep copy  
-    navigate("/all-students");   //use for save and navigated toother router
+    navigate("/all-students"); 
       // console.log(data);
   };
 
