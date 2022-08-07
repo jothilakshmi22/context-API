@@ -94,16 +94,16 @@ function Sidebar() {
 
         <li class="nav-item">
           {/* <Link to="/edit/:id"> */}
-            <a
-              class="nav-link collapsed"
-              href="#"
-              data-toggle="collapse"
-              data-target="#collapseUtilities"
-              aria-expanded="true"
-              aria-controls="collapseUtilities"
-            >
-              <span>Edit user</span>
-            </a>
+          <a
+          // class="nav-link collapsed"
+          // href="#"
+          // data-toggle="collapse"
+          // data-target="#collapseUtilities"
+          // aria-expanded="true"
+          // aria-controls="collapseUtilities"
+          >
+            {/* <span>Edit user</span> */}
+          </a>
           {/* </Link> */}
           <div
             id="collapseUtilities"

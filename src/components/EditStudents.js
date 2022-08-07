@@ -13,6 +13,7 @@ function EditStudents(props) {
   let [batch, setBatch] = useState(props.data.students[params.id].batch);
   let [mobile, setMobile] = useState(props.data.students[params.id].mobile);
   let [email, setEmail] = useState(props.data.students[params.id].email);
+  let [role, setRole] = useState(props.data.students[params.id].role);
   let [status, setStatus] = useState(props.data.students[params.id].status);
 
   let navigate = useNavigate();
@@ -23,6 +24,7 @@ function EditStudents(props) {
       batch,
       mobile,
       email,
+      role,
       status,
     };
     context.students.splice(params.id, 1, data);  // we can also use deep copy  
@@ -67,6 +69,16 @@ function EditStudents(props) {
             placeholder="Enter Batch"
             value={batch}
             onChange={(e) => setBatch(e.target.value)}
+          />
+        </Form.Group>
+      
+        <Form.Group className="mb-3">
+          <Form.Label>Role</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter student or teacher"
+            value={role}
+            onChange={(e) => setRole(e.target.value)}
           />
         </Form.Group>
         <Button variant="primary" onClick={handleSubmit}>

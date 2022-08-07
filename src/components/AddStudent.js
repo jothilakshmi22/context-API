@@ -10,6 +10,7 @@ function AddStudent() {
   let [batch, setBatch] = useState("");
   let [mobile, setMobile] = useState("");
   let [email, setEmail] = useState("");
+  let [role, setRole] = useState("");
   let [status, setStatus] = useState(true);
   let navigate = useNavigate();
 
@@ -20,6 +21,7 @@ function AddStudent() {
       batch,
       mobile,
       email,
+      role,
       status,
     };
     // log(data)
@@ -60,6 +62,14 @@ function AddStudent() {
             type="text"
             placeholder="Enter Batch"
             onChange={(e) => setBatch(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <Form.Label>Role</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter student or teacher"
+            onChange={(e) => setRole(e.target.value)}
           />
         </Form.Group>
         <Button variant="primary" onClick={handleSubmit}>

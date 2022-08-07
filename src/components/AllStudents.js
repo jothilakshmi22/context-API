@@ -7,7 +7,7 @@ import { studentContext } from "../App";
 function AllStudents() {
   const context = useContext(studentContext);
   console.log("context data", context);
-  
+
   // let [stu, setStu] = useState(props.data.students);
 
   let navigate = useNavigate();
@@ -15,10 +15,10 @@ function AllStudents() {
     let newArr = [...context.students];
     newArr.splice(i, 1);
     context.setStudents(newArr);
-
   };
   return (
     <>
+      <h4 style={{ textAlign: "center" }}> Student and Teacher management</h4>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -27,7 +27,9 @@ function AllStudents() {
             <th>Email</th>
             <th>Mobile</th>
             <th>Batch</th>
+            <th>Role</th>
             <th>Status</th>
+
             <th>Actions</th>
           </tr>
         </thead>
@@ -40,6 +42,7 @@ function AllStudents() {
                 <td>{e.email}</td>
                 <td>{e.mobile}</td>
                 <td>{e.batch}</td>
+                <td>{e.role}</td>
                 <td>
                   {e.status ? (
                     <p style={{ color: "green" }}>Active</p>
